@@ -10,9 +10,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.beans.factory.annotation.Autowired;
+import java.util.Optional;
 
-
-import repository.WizardRepository;
+/*
+import repository.SchoolRepository;
+*/
 
 @Controller
 public class SchoolController {
