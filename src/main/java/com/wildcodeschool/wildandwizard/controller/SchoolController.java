@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.beans.factory.annotation.Autowired;
+
+
+import repository.WizardRepository;
 
 @Controller
 public class SchoolController {
@@ -35,7 +39,7 @@ public class SchoolController {
         if (id != null) {
             Optional<School> optionalSchool = repository.findById(id);
             if (optionalSchool.isPresent()) {
-                wizard = optionalSchool.get();
+                school = optionalSchool.get();
             }
         }
         model.addAttribute("school", school);                        
